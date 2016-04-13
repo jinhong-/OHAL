@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OHal.Abstractions", "OHal.Abstractions\OHal.Abstractions.xproj", "{6F07987E-57C5-49C4-B4D4-AB97D5FB59A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE385E1A-F95C-4261-828C-26056E0AD443}"
+	ProjectSection(SolutionItems) = preProject
+		OHal.Abstractions\global.json = OHal.Abstractions\global.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F07987E-57C5-49C4-B4D4-AB97D5FB59A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F07987E-57C5-49C4-B4D4-AB97D5FB59A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F07987E-57C5-49C4-B4D4-AB97D5FB59A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F07987E-57C5-49C4-B4D4-AB97D5FB59A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
