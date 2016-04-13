@@ -10,7 +10,7 @@ namespace OHal
     {
         void Init(IOHalDeviceProvider[] deviceProviders);
         IOHalDevice AddDevice(string providerName, IConfiguration configuration);
-        void RemoveDevice(IOHalDevice device);
+        void RemoveDevice(Guid deviceId);
         IOHalDevice[] GetDevices();
     }
 }
