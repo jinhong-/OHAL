@@ -10,5 +10,6 @@ namespace OHal
         Task<IOHalDeviceInfo> GetDeviceInfo();
         Task Send<T>(string commandName, T payload);
         Task SendStream<T>(string commandName, IObservable<T> payloadStream);
+        IDisposable Subscribe<T>(IObserver<T> subscriber);
     }
 }
