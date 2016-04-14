@@ -8,9 +8,7 @@ namespace OHal
 {
     public interface IOHalRuntime
     {
+        IOHalDeviceManager DeviceManager { get; }
         void Init(IOHalDeviceProvider[] deviceProviders);
-        IOHalDevice AddDevice(Guid id, string providerName, IConfiguration configuration);
-        void RemoveDevice(Guid deviceId);
-        IOHalDevice[] GetDevices();
     }
 }

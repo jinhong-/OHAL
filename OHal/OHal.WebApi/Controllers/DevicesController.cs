@@ -21,7 +21,7 @@ namespace OHal.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            var device = _runtime.GetDevices().FirstOrDefault(x => x.Id == id);
+            var device = _runtime.DeviceManager.GetDevices().FirstOrDefault(x => x.Id == id);
             if (device == null) return this.HttpNotFound();
             var deviceInfo = await device.GetDeviceInfo();
             return Ok(deviceInfo);
@@ -30,7 +30,7 @@ namespace OHal.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var getDeviceInfoTasks = _runtime.GetDevices()
+            var getDeviceInfoTasks = _runtime.DeviceManager.GetDevices()
                 .Select(x => x.GetDeviceInfo());
             var deviceInfoItems = await Task.WhenAll(getDeviceInfoTasks);
             return Ok(deviceInfoItems);
@@ -59,7 +59,7 @@ namespace OHal.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            _runtime.RemoveDevice(id);
+            _runtime.DeviceManager.RemoveDevice(id);
         }
     }
 }
